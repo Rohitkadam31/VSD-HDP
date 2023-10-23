@@ -14,13 +14,13 @@ Hardware Requirements set as GB RAM, 70 GB HDD for the virtual machine.
 Yosys Installation Flow
 
 
-   $ git clone https://github.com/YosysHQ/yosys.git
+    $ git clone https://github.com/YosysHQ/yosys.git
 
-   $ cd yosys
+    $ cd yosys
 
-   $ sudo apt install make (If make is not installed please install it) 
+    $ sudo apt install make (If make is not installed please install it) 
 
-   $ sudo apt-get install build-essential clang bison flex \
+    $ sudo apt-get install build-essential clang bison flex \
 
     libreadline-dev gawk tcl-dev libffi-dev git \
     
