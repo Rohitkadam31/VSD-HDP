@@ -43,6 +43,15 @@ iverilog Installation Flow
 
 ![iverilog](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/e3a727b0-34fb-4f58-9c30-030bb62f55d0)
 
+Gtkwave installation
+
+        sudo apt update
+        sudo apt install gtkwave
+
+![gtkwave](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/eb9ab7f3-be17-4502-8072-97df47b21e2c)
+
+
+
 
 
     
