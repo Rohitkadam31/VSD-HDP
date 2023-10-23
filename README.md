@@ -5,7 +5,7 @@ This repository contains the entire flow from the RTL design to GDSII. It covers
 
 Day 0: Created the Github repository
 
-Day 1: Installation of the tools required.
+Day 1: Installation of the tools required. 
 
 First step: Installed VMBox and Ubuntu 20.04.
 
