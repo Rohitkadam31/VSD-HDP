@@ -39,7 +39,7 @@ invoke using yosys
 
 iverilog Installation Flow
 
-sudo apt-get install iverilog
+       sudo apt-get install iverilog
 
 ![iverilog](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/e3a727b0-34fb-4f58-9c30-030bb62f55d0)
 
