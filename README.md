@@ -33,3 +33,9 @@ Yosys Installation Flow
     $ make 
 
     $ sudo make install
+
+invoke using yosys
+![yosys](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/7c9a13e7-e7d7-4925-abdf-f5fb9b6cc3aa)
+
+
+    
