@@ -38,6 +38,9 @@ invoke using yosys
 ![yosys](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/7c9a13e7-e7d7-4925-abdf-f5fb9b6cc3aa)
 
 iverilog Installation Flow
+
+sudo apt-get install iverilog
+
 ![iverilog](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/e3a727b0-34fb-4f58-9c30-030bb62f55d0)
 
 
