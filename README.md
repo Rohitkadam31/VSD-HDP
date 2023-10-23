@@ -10,3 +10,4 @@ Day 1: Installation of the tools required.
 First step: Installed VMBox and Ubuntu 20.04.
 
 Hardware Requirements set as GB RAM, 70 GB HDD for the virtual machine.
+Yosys Installation Flow
