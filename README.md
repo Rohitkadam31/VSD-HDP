@@ -50,6 +50,17 @@ Gtkwave installation
 
 ![gtkwave](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/eb9ab7f3-be17-4502-8072-97df47b21e2c)
 
+Day 3
+RTL design using verilog with SKY130 technology
+
+ 1 : Environment setup for running the other labs
+
+ step 1 :Make a directory VLSI
+ step 2: Gitclonning
+ then go to 
+       https://github.com/kunalg123
+       
+
 
 
 
