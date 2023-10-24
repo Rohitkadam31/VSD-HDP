@@ -97,13 +97,13 @@ Step 2: So there are lot of filkes starting with tb_
 
   Step 5: Execute that file 
 
-  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog good_mux.v tb_good_mux.v# ./a.out
+          rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog good_mux.v tb_good_mux.v# ./a.out
 
   Step 6: We get a output of simulator as a .vcd file i.e  tb_good_mux.vcd
 
   Step 7: Give this .vcd file with gtkwave command to simulator 
 
-  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/gtkwave tb_good_mux.vcd
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/gtkwave tb_good_mux.vcd
 
   Step 8 : We get output waveform on GTkwave
 
@@ -111,6 +111,19 @@ Step 2: So there are lot of filkes starting with tb_
 
               
 ![Gtkwave-tb_good_mux vcd](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5cd0d4c4-7e96-4b77-9b1e-cffd70337b69)
+
+
+Lab 3: Checking What is Exactly into file
+
+    rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/vim  tb_good_mux.v -o good_mux.v 
+
+We get design and testbench 
+
+     
+![verilog files](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c33c10b1-3b0b-4ac3-b366-854124480392)
+
+
+
 
 
 
