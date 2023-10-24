@@ -76,8 +76,12 @@ and paste to gitclone and then if you hit the enter this will create this direct
 
        sky130RTLDesignAndSynthesisWorkshops
 
-      
-       ![SKY130RTLDesignAndSynthesisWorkshops](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/e78b9dc6-3595-443a-b829-7059391a8d60)
+
+Making directory 
+![SKY130RTLDesignAndSynthesisWorkshops](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/33d184b1-6cae-4064-9270-e37945376abb)
+
+
+
 
 
 
