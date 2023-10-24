@@ -80,6 +80,40 @@ and paste to gitclone and then if you hit the enter this will create this direct
 Making directory 
 ![SKY130RTLDesignAndSynthesisWorkshops](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/33d184b1-6cae-4064-9270-e37945376abb)
 
+Lab 2 : How to work with iverilog and GTKwave
+
+ Step 1: Go to  design folder 
+
+     rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files
+
+Step 2: So there are lot of filkes starting with tb_
+
+   so every file we get a assosciate file 
+
+ Step 3: load some one from file in simulator such as 
+  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog good_mux.v tb_good_mux.v
+
+  Step 4: a.out file getting created 
+
+  Step 5: Execute that file 
+
+  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog good_mux.v tb_good_mux.v# ./a.out
+
+  Step 6: We get a output of simulator as a .vcd file i.e  tb_good_mux.vcd
+
+  Step 7: Give this .vcd file with gtkwave command to simulator 
+
+  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/gtkwave tb_good_mux.vcd
+
+  Step 8 : We get output waveform on GTkwave
+
+    ![Gtkwave-tb_good_mux vcd](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/51d6a226-ad2f-479d-b86a-0b590e0d1722)
+
+
+    
+
+    
+
 
 
 
