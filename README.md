@@ -54,11 +54,32 @@ Day 3
 RTL design using verilog with SKY130 technology
 
  1 : Environment setup for running the other labs
+ 
 
  step 1 :Make a directory VLSI
+ 
  step 2: Gitclonning
+ 
  then go to 
+      
        https://github.com/kunalg123
+
+  then go to github page for our workshop 
+
+       https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
+
+and copy the code link from there 
+
+         https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+and paste to gitclone and then if you hit the enter this will create this directory  
+
+       sky130RTLDesignAndSynthesisWorkshops
+
+       ![SKY130RTLDesignAndSynthesisWorkshops](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/8d49b3aa-42f3-4960-be08-d8c63c089ed4)
+
+
+     
        
 
 
