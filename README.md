@@ -86,7 +86,7 @@ Lab 2 : How to work with iverilog and GTKwave
 
      rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files
 
-Step 2: So there are lot of filkes starting with tb_
+Step 2: So there are lot of files starting with tb_
 
    so every file we get a assosciate file 
 
