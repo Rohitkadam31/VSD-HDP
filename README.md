@@ -91,6 +91,7 @@ Step 2: So there are lot of filkes starting with tb_
    so every file we get a assosciate file 
 
  Step 3: load some one from file in simulator such as 
+ 
   rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog good_mux.v tb_good_mux.v
 
   Step 4: a.out file getting created 
