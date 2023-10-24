@@ -107,23 +107,10 @@ Step 2: So there are lot of filkes starting with tb_
 
   Step 8 : We get output waveform on GTkwave
 
-    ![Gtkwave-tb_good_mux vcd](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/51d6a226-ad2f-479d-b86a-0b590e0d1722)
+   waveform on gtkwave
 
-
-    
-
-    
-
-
-
-
-
-
-    
-
-
-     
-       
+              
+![Gtkwave-tb_good_mux vcd](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5cd0d4c4-7e96-4b77-9b1e-cffd70337b69)
 
 
 
