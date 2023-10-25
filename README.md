@@ -188,6 +188,13 @@ we get
 
 ![simplified verilog](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/ce665e97-d866-4f79-aec6-b46e2d327908)
 
+
+yosys> !vim good_mux_netlist .v
+
+
+
+
+
     
 
     
