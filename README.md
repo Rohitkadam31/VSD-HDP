@@ -1,4 +1,4 @@
-# VSD-HDP 
+ # VSD-HDP 
 VLSI Hardware Development program.
 
 This repository contains the entire flow from the RTL design to GDSII. It covers all the steps including Synthesis (includes post-Synthesis analysis), Floorplanning, Placement, clock tree synthesis - CTS, and Routing.
@@ -185,8 +185,8 @@ Step 10: To see simplified verilog code
 we get 
 
 
-![simplified verilog](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d07de070-c5f6-4350-9047-7bb476a67e30)
 
+![simplified verilog](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/ce665e97-d866-4f79-aec6-b46e2d327908)
 
     
 
