@@ -164,6 +164,32 @@ Graphical version of logic it realise
   
 ![netlsit](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/1e8584dd-4cf3-47e5-addb-e15572ae4a41)
 
+
+Step 8: How to write netlsit
+
+      yosys> write_verilog good_mux_netlist.v
+
+step 9: open it 
+
+       yosys> !vim good_mux_netlist.v
+
+   we get 
+   
+![verilog code](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/bb9e871f-21b4-4bd8-88ab-1e5d6c36f827)
+
+
+Step 10: To see sim plified verilog code 
+
+    yosys> write_verilog -noattr good _mux_netlist.v
+
+
+    we get 
+
+![simplified verilog](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d07de070-c5f6-4350-9047-7bb476a67e30)
+
+
+    
+
     
 
 
