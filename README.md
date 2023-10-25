@@ -123,6 +123,50 @@ We get design and testbench
      
 ![verilog files](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c33c10b1-3b0b-4ac3-b366-854124480392)
 
+Lab 3: Introduction to synthesizer (yosys)
+
+Step 1: Invoke yosys 
+  
+    rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/yosys
+
+
+step 2: yosys font will open
+
+step 3: read the library 
+
+      yosys> read liberty -lib../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+
+
+step 4: read verilog 
+
+      yosys> read_verilog good_mux.v
+
+
+step 5: Model going to synthesis
+
+      yosys> synth -top good_mux
+
+step 6: generate the netlist
+
+     yosys> abc -liberty../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+
+abc is the command which convert our RTL into gate 
+
+
+step 7: See what logic it realise 
+
+    yosys> show 
+
+
+Graphical version of logic it realise
+
+
+  
+![netlsit](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/1e8584dd-4cf3-47e5-addb-e15572ae4a41)
+
+    
+
+
 
 
 
