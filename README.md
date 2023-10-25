@@ -180,7 +180,7 @@ step 9: open it
 
 Step 10: To see simplified verilog code 
 
-    yosys> write_verilog -noattr good _mux_netlist.v
+    yosys> write_verilog -noattr good_mux_netlist.v
 
 we get 
 
