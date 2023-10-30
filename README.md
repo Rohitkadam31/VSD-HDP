@@ -290,6 +290,22 @@ we get
 
 ![sync set](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/b5d94d74-852d-4a32-8064-97c36e574715)
 
+now synthesiz dff_synres.v
+
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys> read_verilog dff_syncres.v
+         yosys> synth -top dff_syncres
+         yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys>show
+
+         
+![async set async  reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/989938f4-f589-4a86-80af-b3b2469ba155)
+
+     
+      
+
 
          
           
