@@ -259,7 +259,7 @@ when reset came it was not waiting for clock edge and immediately output went lo
 ![sync reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c56ef17b-7125-4c36-aebf-e2680db807db)
 
 
-Now let,s synthesis this three circuit's
+Now let,s synthesis dff_asynres.v 
 
          rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
          yosys> read_verilog dff_asyncres.v
@@ -272,6 +272,23 @@ we get
 
 
 ![async reset 1](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/a4f380d4-ee83-46d4-b978-d8cc6748ac9d)
+
+
+
+Now synthesis dff_async_set.v
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys> read_verilog dff_async_set.v
+         yosys> synth -top dff_async_set
+         yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys>show
+
+
+we get 
+
+
+![sync set](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/b5d94d74-852d-4a32-8064-97c36e574715)
 
 
          
