@@ -253,7 +253,7 @@ when reset came it was not waiting for clock edge and immediately output went lo
 
    we get
 
-         both clock is high ,preference is given to sync_reset
+ both clock is high ,preference is given to sync_reset
 
 
 ![sync reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c56ef17b-7125-4c36-aebf-e2680db807db)
