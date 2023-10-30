@@ -290,7 +290,7 @@ we get
 
 ![sync set](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/b5d94d74-852d-4a32-8064-97c36e574715)
 
-now synthesiz dff_synres.v
+now synthesiz dff_syncres.v
 
 
          rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
