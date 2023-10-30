@@ -196,7 +196,7 @@ Flop synthesis simulation :
 
 we are using this three files:
 1)dff_asyncres.v 
-2)dff_syncres.v
+2)dff_async_set.v
 3)dff_asyncres_syncres.v
 
 
@@ -210,7 +210,7 @@ step 1:
                  
                  //we get vcd file ,copy tat file and paste 
                  
-                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# gtkwave tb_dff_asyncres.vcd
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# gtkwave ./tb_dff_asyncres.vcd
                  
 we get
 
@@ -218,6 +218,31 @@ when reset came it was not waiting for clock edge and immediately output went lo
 
 
 ![Async reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/70dbac0a-e13e-49df-afeb-f997335a3284)
+
+
+2) Let's check dff_async_set.v
+ 
+
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog dff_async_set.v tb_dff_async_set.v
+                 
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files#./a.out
+                 
+                 //we get vcd file ,copy tat file and paste 
+                 
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# gtkwave ./tb_dff_async_set.vcd
+
+
+   We get
+
+    output is going to be 1,that is the diffrence between asyncres and async_set 
+
+
+  
+![async set](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/383f7c09-7b9a-4c29-a5db-9ee56671c211)
+
+                    
+
+
 
 
 
