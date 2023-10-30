@@ -212,10 +212,11 @@ step 1:
                  
                  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# gtkwave tb_dff_asyncres.vcd
                  
-we get 
+we get
 
-                     
-      ![Async reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/eea6aa0c-7af5-484e-b4e2-939d412d8fe2)
+
+
+![Async reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/70dbac0a-e13e-49df-afeb-f997335a3284)
 
                  
                  
