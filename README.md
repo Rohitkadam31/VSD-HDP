@@ -214,9 +214,15 @@ step 1:
                  
 we get
 
+when reset came it was not waiting for clock edge and immediately output went low.
 
 
 ![Async reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/70dbac0a-e13e-49df-afeb-f997335a3284)
+
+
+
+
+
 
                  
                  
