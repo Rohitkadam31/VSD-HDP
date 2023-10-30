@@ -240,6 +240,28 @@ when reset came it was not waiting for clock edge and immediately output went lo
   
 ![async set](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/383f7c09-7b9a-4c29-a5db-9ee56671c211)
 
+3) let's check dff_syncres.v
+
+
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog dff_syncres.v tb_dff_syncres.v
+                 
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files#./a.out
+                 
+                 //we get vcd file ,copy tat file and paste 
+                 
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# gtkwave  tb_dff_syncres.vcd
+
+   we get
+
+         both clock is high ,preference is given to sync_reset
+
+
+![sync reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c56ef17b-7125-4c36-aebf-e2680db807db)
+
+   
+          
+       
+
                     
 
 
