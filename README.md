@@ -203,11 +203,13 @@ we are using this three files:
 let's check dff_async_set.v
 
 step 1:          rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog dff_asyncres.v tb_dff_asyncres.v
-                  <br>
+                  
                  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files#./a.out
+                 
                  //we get vcd file ,copy tat file and paste 
+                 
                  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# gtkwave tb_dff_asyncres.vcd
-                 <br>
+                 
                  we get
                  
                  
