@@ -320,9 +320,10 @@ Combinational Logic Optimisation
          
 cells invoked
        ![1](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/2dddc39f-dc99-4da1-af15-efea5f286992)
-  
-         
 
+       we get
+
+![2](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/6ebe949d-d050-43f7-ac61-728a1e22b50d)
 
 
          
