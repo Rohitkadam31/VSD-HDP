@@ -325,6 +325,16 @@ cells invoked
 
 ![2](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/6ebe949d-d050-43f7-ac61-728a1e22b50d)
 
+Another example
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog opt_check2.v
+         yosys> synth -top opt_check2
+         yosys> opt_clean -purge
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys>show
+
 
          
           
