@@ -303,7 +303,12 @@ now synthesiz dff_syncres.v
          
 ![async set async  reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/989938f4-f589-4a86-80af-b3b2469ba155)
 
-     
+
+DAY 3
+
+Logic Optimization: combinational and sequential
+<br>
+Combinational Logic Optimisation
       
 
 
