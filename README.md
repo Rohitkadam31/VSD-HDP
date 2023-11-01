@@ -317,8 +317,8 @@ Combinational Logic Optimisation
          yosys> opt_clean -purge
          yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
          yosys>show
-
-
+         
+cells invoked
          
       ![1](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/ef3127c8-9dc3-49aa-ab7e-03c8e0a3b7ed)
 
