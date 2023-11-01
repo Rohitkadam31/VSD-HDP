@@ -50,7 +50,7 @@ Gtkwave installation
 
 ![gtkwave](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/eb9ab7f3-be17-4502-8072-97df47b21e2c)
 
-Day 3
+Day 
 RTL design using verilog with SKY130 technology
 
  1 : Environment setup for running the other labs
@@ -307,9 +307,26 @@ now synthesiz dff_syncres.v
 DAY 3
 
 Logic Optimization: combinational and sequential
-<br>
+
 Combinational Logic Optimisation
-      
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog opt_check.v
+         yosys> synth -top opt_check
+         yosys> opt_clean -purge
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys>show
+
+
+         
+      ![1](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/ef3127c8-9dc3-49aa-ab7e-03c8e0a3b7ed)
+
+
+
+
+![2](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5ec488d7-6b36-4200-a40e-3cd9b0dc3816)
+
 
 
          
