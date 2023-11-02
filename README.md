@@ -384,7 +384,15 @@ Dff_const2:
          yosys>show
 
    cells invoked 
-      
+
+
+       
+      ![1 (1)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/79f58dbe-ae04-4095-8c9d-160864207fa7)
+
+we get
+
+![1 (2)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/a13ef52b-f42c-4e53-9fa9-9426f75e8ae5)
+
 
   
 
