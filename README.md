@@ -335,6 +335,15 @@ Another example
          yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
          yosys>show
 
+ cells invoked
+    
+![3](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/df21ed51-da6d-4d09-8a10-1643ebbb22a2)
+
+we get
+
+
+![3 1](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/01f686f1-2f1a-4b39-895b-bb08239c67cd)
+
 
          
           
