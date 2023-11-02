@@ -383,9 +383,11 @@ Dff_const2:
          yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
          yosys>show
 
-   cells invoked 
+
+cells invoked
    
-            ![1 (1)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/6d78ac1a-90e3-41bb-ad6c-16ee3c472600)
+           
+ ![1 (1)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/6d78ac1a-90e3-41bb-ad6c-16ee3c472600)
 
 
 
