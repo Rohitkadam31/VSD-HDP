@@ -347,6 +347,8 @@ we get
 
 Sequential Logic Optimisation
 
+ dff_const1: 
+
     
          rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
          yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
@@ -366,6 +368,25 @@ cells invoked
 we get
 
 ![4 2](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/b9fe6734-c60d-4e02-b4ff-e8e8fe9a9011)
+
+
+
+Another example 
+Dff_const2:
+
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog dff_const2.v
+         yosys> synth -top dff_const2
+         yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys>show
+
+   cells invoked 
+      
+
+  
 
 
          
