@@ -345,6 +345,29 @@ we get
 ![3 1](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/01f686f1-2f1a-4b39-895b-bb08239c67cd)
 
 
+Sequential Logic Optimisation
+
+    
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog dff_const1.v
+         yosys> synth -top dff_const1
+         yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys>show
+
+  
+cells invoked 
+
+  
+![4](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/52513936-5470-401a-9a65-8a8c6f58e066)
+
+
+we get
+
+![4 2](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/b9fe6734-c60d-4e02-b4ff-e8e8fe9a9011)
+
+
          
           
 
