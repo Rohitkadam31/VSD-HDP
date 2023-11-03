@@ -440,7 +440,7 @@ GLS using IVERILOG
 ![3](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/7f926246-d81f-43fb-87a2-19a121d7f288)
 
 
-How to ionvoke GLS 
+How to invoke GLS 
 
 Requirement:
               1)Netlist
