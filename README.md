@@ -393,21 +393,202 @@ we get
 
 ![1 (2)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d89920b3-10e7-47c3-92f4-2eba71badc5b)
 
+
+Unused output optimization : 
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog counter_opt.v
+         yosys> synth -top counter_opt
+         yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys>show
+
+
+Cells invoked 
+
+![1 (2)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5a299ed2-a8e4-4d13-a856-0242457b4ff2)
+
+
+we get 
+
+![1 (1)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/78206dae-d6e7-4e10-a065-b72b115ef0d3)
+
+
+If we modify the RTL we see following changes
+
    
+![2 (1)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/105f7004-5ed1-46c4-b56c-a7d5bdb6e74a)
+
+three flops are added (infered).
 
 
+After Change in RTl we get
+
+![2 (2)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/76fafcdb-f956-4931-8b77-c671ee9b2c87)
 
 
+DAY 4:
 
-  
+GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
+GLS : Gate level simulation
+
+GLS using IVERILOG
+
+
+![3](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/7f926246-d81f-43fb-87a2-19a121d7f288)
+
+
+How to ionvoke GLS 
+
+Requirement:
+              1)Netlist
+             2 verilog models of standard cell libraries
+             3 Testbench 
+
+
+Process :
+
+we have to  submit this three to iverilog ,iverilog dump out the vcd file and we get waveform on gtkwave
+
+
+Step 1:
+
+                 rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# gtkwave tb_ternary_operater_mux.vcd
+
+  we get
+
+
+![Screenshot 2023-11-03 175929](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/a39a90a6-68ba-4791-9f02-8ef79c970b58)
+
+Now synthesise this 
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog ternary_operater_mux.v
+         yosys> synth -top ternary_operater_mux
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> write_verilog -noattr ternary_operater_mux_net.v
+         yosys>show
+
+
+ We get 
+
+ 
+![Screenshot (1)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5721da9a-5639-4b91-ad17-3ca45d29ecfd)
+
+
+Bad_Mux:
+
+    rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog file# iverilog bad_mux.v tb_bad_mux.v
+    rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog file# ./a.out
+
+    //we get vcd file,give it to gtkwave
+    rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog file# gtkwave  tb_bad_mux.vcd
+
+we get
+
+![Screenshot (3)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/842189e0-4dfe-4968-bb48-e7ef7d0a5fa1)
+
+
+we can see it is not working like mux.
+
+Now synthesis this :
 
          
-          
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog bad_mux.v
+         yosys> synth -top bad_mux
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> write_verilog -noattr bad_mux_net.v
+         
+simulate bad_mux netlist
 
-   
           
-       
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files # iverilog ../lib/verilog_model/primitives.v ../lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+     rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files # ./a.out
+      rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files # gtkwave tb_bad_mux.vcd
+
+We get
+
+![Screenshot 2023-11-03 190204](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/46265b2b-2756-43ef-a452-d7e74c3340bb)
+
+
+Synthesis simulation mismatch using blocking caveat:
+
+           
+             rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog file# iverilog blocking_cavet.v tb_blocking_cavet.v
+             rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog file# ./a.out
+
+             //we get vcd file,give it to gtkwave
+              rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog file# gtkwave  tb_blocking_cavet.vcd
+
+
+we get
+ 
+   ![55](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/1fe380db-4a40-4a86-b6bd-170ad9bf45fe)
+
+
+now synthesis:
+
+         rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files# yosys
+         yosys>read_liberty -lib ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> read_verilog blocking_caveat.v
+         yosys> synth -top blocking_caveat
+         yosys> abc -liberty ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+         yosys> write_verilog -noattr blocking_caveat_net.v
+         yosys>show
+
+
+
+we get
+
+   ![6](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5b56c28b-ef12-4fb3-9844-707d19f9d229)
+
+
+Gtkwave:
+
+        rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files # iverilog ../lib/verilog_model/primitives.v ../lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat.v 
+        tb_blocking_caveat.v
+
+
+  we get
+
+  ![Screenshot 2023-11-03 195924](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/0f1dbf14-c529-4e7a-9d47-b5baecb33f40)
+
+ 
+     
+
+
+      
+
+
+
+
+
+
+     
+
+
+
+
+               
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
 
                     
 
