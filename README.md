@@ -444,8 +444,8 @@ How to invoke GLS
 
 Requirement:
               1)Netlist
-             2 verilog models of standard cell libraries
-             3 Testbench 
+              2) verilog models of standard cell libraries
+              3) Testbench 
 
 
 Process :
