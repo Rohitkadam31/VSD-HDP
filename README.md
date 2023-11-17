@@ -11,14 +11,14 @@ First step: Installed VMBox and Ubuntu 20.04.
 
 Hardware Requirements set as 6 GB RAM, 70 GB HDD for the virtual machine.
 
-Yosys Installation Flow
+# Yosys Installation Flow
 
 
     $ git clone https://github.com/YosysHQ/yosys.git
 
     $ cd yosys
 
-    $ sudo apt install make (If make is not installed please install it) 
+    $ sudo apt install make (If make is not installed , install it) 
 
     $ sudo apt-get install build-essential clang bison flex \
 
@@ -51,7 +51,7 @@ Gtkwave installation
 ![gtkwave](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/eb9ab7f3-be17-4502-8072-97df47b21e2c)
 
 Day 
-RTL design using verilog with SKY130 technology
+# RTL design using verilog with SKY130 technology
 
  1 : Environment setup for running the other labs
  
@@ -192,7 +192,7 @@ we get
 yosys> !vim good_mux_netlist .v
 
 
-Flop synthesis simulation :
+# Flop synthesis simulation :
 
 we are using this three files:
 1)dff_asyncres.v 
@@ -200,7 +200,7 @@ we are using this three files:
 3)dff_asyncres_syncres.v
 
 
-let's check dff_async_set.v
+* let's check dff_async_set.v
 
 step 1:  
 
@@ -220,7 +220,8 @@ when reset came it was not waiting for clock edge and immediately output went lo
 ![Async reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/70dbac0a-e13e-49df-afeb-f997335a3284)
 
 
-2) Let's check dff_async_set.v
+
+ * Let's check dff_async_set.v
  
 
                  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog dff_async_set.v tb_dff_async_set.v
@@ -240,7 +241,7 @@ when reset came it was not waiting for clock edge and immediately output went lo
   
 ![async set](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/383f7c09-7b9a-4c29-a5db-9ee56671c211)
 
-3) let's check dff_syncres.v
+* let's check dff_syncres.v
 
 
                  rohit@rohit-VirtualBox:~/sky130RTLDesignAndSynthesisWorkshop/verilog files/iverilog dff_syncres.v tb_dff_syncres.v
@@ -304,9 +305,9 @@ now synthesiz dff_syncres.v
 ![async set async  reset](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/989938f4-f589-4a86-80af-b3b2469ba155)
 
 
-DAY 3
+# DAY 3
 
-Logic Optimization: combinational and sequential
+# Logic Optimization: combinational and sequential
 
 Combinational Logic Optimisation
 
@@ -371,7 +372,8 @@ we get
 
 
 
-Another example 
+Another example
+
 Dff_const2:
 
 
@@ -428,11 +430,11 @@ After Change in RTl we get
 ![2 (2)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/76fafcdb-f956-4931-8b77-c671ee9b2c87)
 
 
-DAY 4:
+# DAY 4:
 
-GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+# GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
-GLS : Gate level simulation
+# GLS : Gate level simulation
 
 GLS using IVERILOG
 
@@ -440,7 +442,7 @@ GLS using IVERILOG
 ![3](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/7f926246-d81f-43fb-87a2-19a121d7f288)
 
 
-How to invoke GLS 
+# How to invoke GLS 
 
 Requirement:
               1)Netlist
