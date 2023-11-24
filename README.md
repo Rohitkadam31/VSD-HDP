@@ -812,7 +812,7 @@ output load (parasitic capacitance) --> incresase output logic delay which needs
 
 #### NOTE : 1) rule of thumb --> external delay : internal delay is 70:30. 2) IO paths need to be constrained for MAX delay(setup) and MIN delay(hold).
 
-# LABS :
+## LABS :
 
 exploring the library file and learning how the files were characterised --> area ,power , delay , capacitances , input (rise , fall) transistion , pin attributes --> direction,function,Clock pin,Timing sense and type etc , Power pin conncetions ( since logic gates are nothing but CMOS --> VGND , VPBN etc), and other necessary information.
 
