@@ -425,7 +425,7 @@ If we modify the RTL we see following changes
 three flops are added (infered).
 
 
-After Change in RTl we get
+After Change in RTL we get
 
 ![2 (2)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/76fafcdb-f956-4931-8b77-c671ee9b2c87)
 
@@ -739,6 +739,140 @@ The synthesis in the OpenLane flow is carried out by yosys.
 ![3 (2)](https://github.com/Rohitkadam31/iiitb_r2_4bit_bm-Rohit/assets/148602919/4195fa2f-48e8-4ef9-b2b1-2fe31932e04c)
 
 We can see that GLS simulation matching to RTL simulation 
+
+# STA -Static Timing Analysis
+
+Delay : 
+delay is function of load capaticance. 
+
+Max and minimum delay constraint  
+
+Max delay :
+Maximum time the combinational circuit can be taken including the setup time is called Max delay constraint . 
+
+Min delay constraint :
+
+The data path is so short that it passes through. several registers during the same clock cycle  
+
+If we have fast current source we get less delay.   
+
+#  Constraints: 
+Constraints are the instructions that the designer apply during various step in VLSI chip implementation, such as logic synthesis, clock tree synthesis, Place and Route, and  Static  Timing Analysis. 
+
+* Advance synthesis and STA using design compiler constraints.
+
+
+# Introduction to STA
+
+Delay is a function of input transition i.e current (inflow) and output load i.e load capacitance (size of the bucket). [ direct proportional ]
+
+Timing arc --> delay infromation from all inputs to all outputs eg 2 i/p AND gate has 2 timing arcs -> a-q and b-q. Any changes in the inputs will affect the output. For a D FF we have 3 timimg arcs -> Clk - Q delay , setup time and hold time. For a D latch we have 4 timing arcs - D - Q delay ,Clk - Q delay ,setup time and hold time.
+
+#### Note :triggering of DFF and Dlatch (setup and hold time) occur at sampling points. Therefore, for DFF it will be at posedge or negedge of Clk and for Dlatch it will be at negedge or posedge of Clk (pos level Clk or neg level clk). ------- IMPORTANT.
+
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/0fce30af-6413-47b5-81cf-18be84fca5e1)
+
+3. Timing path - the path for data to move from a) clk of one flop to the input of next flop (reg 2 reg) b) input to output (not present usually IO path) c) input to flop d) clk of flop to output (c,d are IO Timing Paths). The max Tclk value will be the critical path of the design as it will be the least clk delay that can be used for the design.
+
+#### Note :a) MAX constraint :- Tclk >= Tcq + Tcombi + Tsetup --> Data path(max) > Clk path(min) b) MIN constraint :- Thold <= Tcq + Tcombi --> Data path(min) < Clk path(max)
+
+## Basic STA :
+
+### Constraints
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/69f55fa8-ccc4-4518-bf2f-4bb857bcddca)
+
+The constraints are applied based on the design specifications
+
+1. reg2reg --> contrained by clk -> Tcombi will be squeezed to compensate.
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/96f55216-4818-4c94-86e2-8d47321aacd8)
+
+2. in2reg --> constrained by clk ,input external delay and input transition . Input logic will be squeezed to compensate.
+input external delay
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/71cea486-b225-4079-bf83-39812471a91b)
+
+input transition delay --> incresase input logic delay which needs to be further squeezed.
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/20c4751b-da85-47c7-9332-a09049d80dd1)
+
+3. reg2op --> constrained by clk ,output external delay and output load (parasitic capacitance). Output logic will be squeezed to compensate
+
+output external delay
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d5c3d09e-659b-4ef1-aac3-df3dbf4c93fd)
+
+output load (parasitic capacitance) --> incresase output logic delay which needs to be further squeezed.
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/e45ee2aa-536d-4c4d-8181-9c3ee792595e)
+
+4. reg2op and in2reg are called IO Paths and the delay modelling is called IO delay Modelling. (standard interface specifications like SPI,I2C --> industry protocols)
+
+#### NOTE : 1) rule of thumb --> external delay : internal delay is 70:30. 2) IO paths need to be constrained for MAX delay(setup) and MIN delay(hold).
+
+# LABS :
+
+exploring the library file and learning how the files were characterised --> area ,power , delay , capacitances , input (rise , fall) transistion , pin attributes --> direction,function,Clock pin,Timing sense and type etc , Power pin conncetions ( since logic gates are nothing but CMOS --> VGND , VPBN etc), and other necessary information.
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/25f309d4-87b5-4fd9-9a11-6e255be21c3a)
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5fb33836-90c4-4ebc-9628-52b4d5e905d0)
+
+* Lookup tables were also present in the lib file so that tool is able to select the necessary o/p based of the 2 indexes. Eg indexes --> input transition and output capacitance o/p --> timing delay. in case the specified values dont lie in the indexes the range in which the values lie is taken and interpolation is done obtain the value at the specified point.
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/9cd8c785-afcf-49f3-bb42-e9fab4f27a7f)
+
+similarly sequential cells will also have such factors and there exist more dependencies of one pin o/p on the other pin o/p --> related pins. They will also have Clock pins --> There timing type will be specified based of the type of flop it is (rising_edge or falling_edge --> posedge or negedge). The setup/hold time claculation part should also be specified to the tool as "setup_rising" or "setup_falling" to let the tool know at what edge of clock must the setup time be calculated.
+
+LHS - posedge clk , RHS - negedge clk for DFF - defining type of clock
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/b1228948-0f28-4c70-bf31-03e9f76b3f18)
+
+LHS - posedge clk , RHS - negedge clk for DFF - defining setup time calc
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/2d9e756b-7e40-4eb2-a7d7-73e6d598c172)
+
+dc shell commands --> in our case we will be using OpenSTA since its a free source // verify if these functions match with OpenSTA
+
+
+         > list_lib
+         > foreach_in_collection my_lib_cell [get_lib_cells */*<the cell you need> { 
+	    set my_lib_cell_name [get_object_name $my_lib_cell]; 
+	     echo$my_lib_cell_name;
+	  }
+         > foreach_in_collection my_pins [get_lib_pins <cell name>/*]{  --> my_pins is a loop variable
+	   set my_pins_name [get_object_name $my_pins];		--> 'get_object_name' 
+	   set pin_dir [get_lib_attribute $my_pins_name direction];   --> 'set' is for variable instantiation ; get_lib_pins/attribute <file_name> <pin/attribute_name>
+	   echo$my_pins_name	$pin_dir;                      --> to use a variable we use $<var>; to print a variable echo$<var>
+	  }
+
+         > source <script filename>.tcl --> for calling a script file
+         > list_attributes -app > a  --> for seeing all defined attributes in a library ; it is fed to file called 'a'.
+
+  A script file called my_script.tcl
+  
+  ![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/f2fe1632-61b6-4f48-9f90-ae168ec4258c)
+
+  ##### NOTE: Important Constraint Commands 1)get_clocks 2)get_ports 3)get_pins 4)get_nets 5)set_input_transition -min -max 6)set_input_delay -min -max 7)set_clock_latency -source           8)set_clock_latency - 9)set_clock_uncertainty - 10)create_clock -name -per -wave 11)get_attribute 12)create_generated_clock -master -source -div 13) regexp a b
+
+  
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
   
