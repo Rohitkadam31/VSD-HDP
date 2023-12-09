@@ -856,17 +856,25 @@ dc shell commands --> in our case we will be using OpenSTA since its a free sour
 
   ##### NOTE: Important Constraint Commands 1)get_clocks 2)get_ports 3)get_pins 4)get_nets 5)set_input_transition -min -max 6)set_input_delay -min -max 7)set_clock_latency -source           8)set_clock_latency - 9)set_clock_uncertainty - 10)create_clock -name -per -wave 11)get_attribute 12)create_generated_clock -master -source -div 13) regexp a b
 
-# Constraint (iiitb_r2_4bit_bm.sdc) :
+# Constraint (constraints.sdc) :
 
 Constraints are the instructions that the designer apply during various step in VLSI chip implementation, such as logic synthesis, clock tree synthesis, Place and Route, and Static Timing Analysis. They define what the tools can or cannot do with the design or how the tool behaves.
 Design constraints are limitations or restrictions in the design process imposed by internal and external factors. 
 
-* Constraint (iiitb_r2_4bit_bm.sdc) :
+## For static Timimg analysis we required :
+* Library 
+* Verilog file 
+* Constraints.
+
+So, we already have a Library and verilog files.and we require constraint file for static timing analysis.
+so, first we need to create sdc file and then write constraint for your design in it.
+
+* Constraint (constraints.sdc) :
 
 
                   ###############################################################################
                   # Created by write_sdc
-                  # Wed 12 Dec 03:33:29 2023
+                  # Wed 8 Dec 03:33:29 2023
                   ###############################################################################
                   current_design iiitb_r2_4bit_bm
                   ###############################################################################
@@ -923,11 +931,21 @@ Design constraints are limitations or restrictions in the design process imposed
                   ###############################################################################
                   set_max_fanout 10.0000 [current_design]
 
- 
+Constraint written in sdc file 
+  
+
+ ![WhatsApp Image 2023-12-09 at 23 13 14](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/f5a17454-d453-43e2-8c44-138cd89c6545)
 
 
 
 
+![2 (2)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/b68a1957-4a31-4f3d-bd4a-fe618ecd3d4a)
+
+
+So , we get all required input for Static timing analysis .Now run STA using openSTA.
+
+
+![2 (3)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/16cb1d06-3917-4430-b058-71c86ac06f80)
 
 
 
