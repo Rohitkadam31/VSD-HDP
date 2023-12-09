@@ -864,7 +864,7 @@ Design constraints are limitations or restrictions in the design process imposed
 ## For static Timimg analysis we required :
 * Library 
 * Verilog file 
-* Constraints.
+* Constraints (sdc).
 
 So, we already have a Library and verilog files.and we require constraint file for static timing analysis.
 so, first we need to create sdc file and then write constraint for your design in it.
