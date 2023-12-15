@@ -1001,6 +1001,90 @@ It can be seen from the even though the W/L ratio remains 2.6 for both the plots
  * Used to calculate the delay tables for STA.
  *  The plot of Vout vs Vin in CMOS inverter.
 
+  * Ngspice simulation: day2_nfet_idvds_L015_W039.spice
+
+    To use ngspice for plotting, use the following commands:
+
+      ngspice <name: day2_nfet_idvds_L015_W039.spice>
+      plot -<name: vdd#branch>
+
+ We get
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/f6942e62-6192-41a1-8129-df5ecbf574e4)
+
+Ngspice simulation: day2_nfet_idvgs_L015_W039.spice
+To use ngspice for plotting, use the following commands:
+
+     ngspice <name: day2_nfet_idvgs_L015_W039.spice>
+     plot -<name: vdd#branch>
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c007f8bc-5d25-4e46-a38c-b4730b9c03ea)
+
+To calculate the thrshold voltage in ngspice, use the plot above and extend a line tangent to the linear line (the slope), until it meets the x-axis and that would be the value of the threshold voltage.
+
+* Ngspice simulation: day3_inv_vtc_Wp084_Wn036.spice
+To use ngspice for plotting, use the following commands:
+
+     ngspice <name: day3_inv_vtc_Wp084_Wn036.spice>
+     plot <name: out> vs <name: in>
+
+  Below is the screenshot of the obtained result of the VTC, where switching threshold is around 0.876v:
+  
+ ![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/26e424b2-9199-4187-bd73-c81a357e46fe)
+
+* Ngspice simulation: day3_inv_tran_Wp084_Wn036.spice
+ To use ngspice for plotting, use the following commands:
+
+     ngspice <name: day3_inv_tran_Wp084_Wn036.spice>
+     plot <name: out> vs <name: time> <name: in>
+
+Below is the screenshot of the obtained result of the transient analysis, where rise delay and fall delay are around 0.322ns and 0.285ns at 0.9v (50%) respectively:
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5fc75c46-cc00-4773-abd0-bfe3841e00ff)
+
+* Ngspice simulation: day4_inv_noisemargin_wp1_wn036.spice
+  To use ngspice for plotting, use the following commands:
+
+      ngspice <name: day4_inv_noisemargin_wp1_wn036.spice>
+      plot <name: out> vs <name: in>
+  
+ Below is the screenshot of the obtained result of the VTC,  VIL is around 0.7v 
+ and VOH is around 1.7v. VOL is around 0.08v and VIH is around 1v (noise margin 
+ low is around 0.62v and noise margin high=0.7):
+
+ ![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/f4382afa-d3bb-4a94-b2d3-377d843966ad)
+
+* Ngspice simulation: day5_inv_supplyvariation_Wp1_Wn036.spice
+To use ngspice for plotting, use the following commands:
+
+     ngspice <name: day5_inv_supplyvariation_Wp1_Wn036.spice>
+
+  Below is the screenshot of the obtained result of the VTC curves for different supply voltages, gain in curve corresponding to 1.8v is (1.706-0.076)/(1.008-0.772)=6.907. Gain in curve corresponding to 0.8v is (0.770-0.021)/(0.511-0.428)=9.024 (increases as supply voltage decreases, but then decreases again because supply would not be enough for the device to operate):
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/061aaf51-8a20-40db-9bac-d94c47ddaffc)
+
+Ngspice simulation: day5_inv_devicevariation_wp7_wn042.spice
+To use ngspice for plotting, use the following commands:
+
+      ngspice <name: day5_inv_devicevariation_wp7_wn042.spice>
+      plot <name: out> vs <name: in>
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/4764f0e5-3aed-4115-ab9b-912ced4870e5)
+
+
+
+
+ 
+
+
+
+    
+
+
+
+
+    
+
 
 
 
