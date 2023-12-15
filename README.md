@@ -947,6 +947,71 @@ So , we get all required input for Static timing analysis .Now run STA using ope
 
 ![2 (3)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/16cb1d06-3917-4430-b058-71c86ac06f80)
 
+# An introduction to SPICE and how it is used to analyse MOSFETS
+
+The graph below is a spice simulation of a long channel NMOS with W = 5 L = 2
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/79375c63-3edd-45ef-a69b-408a58fab0d1)
+
+Some of the coordinates as shown in ngspice
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d7f9c2ef-eb02-4308-9cb2-9d23d6f996ce)
+
+Long and Short channel ( L > 25nm and L < 25nm )
+
+Due to velocity saturation effect in short channel MOS, the saturation sets in early. As a result the peak current is much less compared to long channel MOS.
+
+in the given case the L-channel MOS has peak current idmax = 410 uA while S-channel MOS had peak current idmax = 197 uA.
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/74f7d007-5c71-47a4-b388-ad0bb45226e9)
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/8e1d5778-1496-47f3-8828-4403c14459f7)
+
+a plot between id vs Vgs at constant Vds = 1.8V
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/ce4a7bd2-2957-481d-b1be-e4d977c369a5)
+
+The threshold voltage Vt = 0.75V for this NMOS
+
+# CMOS Voltage Transfer Characteristics
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/da4e00d7-119d-4e00-87c2-20968d407517)
+
+NMOS and PMOS dc characteristics were merged and the voltage transfer characteristics for CMOS inverter was plotted. The above diagram denotes the behavior exhibited by the NMOS and PMOS clubbed together at different Vin and Vout conditions in the range of 0 to 2 V.
+
+__SPICE Simulations for Id vs Vds for W = 0.39u and L = 0.15u
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d3bcba38-d74c-45a4-8e8d-d55c95046839)
+
+SPICE Simulations for Id vs Vgs for W = 0.39u and L = 0.15u
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/6137d16e-15c5-440d-9ec9-8b4cd04c2bde)
+
+SPICE Simulations for Id vs Vgs for W = 3.12u and L = 1.20u
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/7f7d1943-6d00-4e94-a5c1-59f50c5a901e)
+
+It can be seen from the even though the W/L ratio remains 2.6 for both the plots, Id is slightly different. Short channel transistor characteristics has more linearity than the long channel one.
+
+# Velocity Saturation
+* At higher electric fields, the electrons velocity becomes constant.
+* This happens in short channel as the electric field strengh increases due to reduced channel length.
+
+ # VTC
+ * Used to calculate the delay tables for STA.
+ *  The plot of Vout vs Vin in CMOS inverter.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
