@@ -1001,7 +1001,7 @@ It can be seen from the even though the W/L ratio remains 2.6 for both the plots
  * Used to calculate the delay tables for STA.
  *  The plot of Vout vs Vin in CMOS inverter.
 
-  * Ngspice simulation: day2_nfet_idvds_L015_W039.spice
+ Ngspice simulation: day2_nfet_idvds_L015_W039.spice
 
     To use ngspice for plotting, use the following commands:
 
