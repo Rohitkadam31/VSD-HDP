@@ -1,4 +1,4 @@
-![Screenshot 2023-12-16 144358](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/25abaf2e-589e-4de2-b681-02baeb137ef0) # VSD-HDP 
+ # VSD-HDP 
 VLSI Hardware Development program.
 
 This repository contains the entire flow from the RTL design to GDSII. It covers all the steps including Synthesis (includes post-Synthesis analysis), Floorplanning, Placement, clock tree synthesis - CTS, and Routing.
