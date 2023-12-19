@@ -973,7 +973,7 @@ ngspice simulation : day1_nfet_idvds_L2_W5.spice
 
 we get
 
-     ![Screenshot 2023-12-16 130748](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/6e82cb5e-d652-496b-90e4-ec398d9a3d25)
+ ![Screenshot 2023-12-16 130748](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/6e82cb5e-d652-496b-90e4-ec398d9a3d25)
 
 
  Ngspice simulation: day2_nfet_idvds_L015_W039.spice
@@ -985,9 +985,9 @@ we get
 
  We get
 
-![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/f6942e62-6192-41a1-8129-df5ecbf574e4)
-
 ![Screenshot 2023-12-16 132200](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/dda6adcc-54b5-4523-9268-91f04dcb18af)
+
+![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/f6942e62-6192-41a1-8129-df5ecbf574e4)
 
 
 Ngspice simulation: day2_nfet_idvgs_L015_W039.spice
@@ -996,24 +996,20 @@ To use ngspice for plotting, use the following commands:
      ngspice <name: day2_nfet_idvgs_L015_W039.spice>
      plot -<name: vdd#branch>
 
-     ![Screenshot 2023-12-16 142739](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/dd0e1404-9bc7-494d-97d4-52065092bd70)
+![Screenshot 2023-12-16 142739](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/dd0e1404-9bc7-494d-97d4-52065092bd70)
 
 
-     ![Screenshot 2023-12-16 142832](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d0f9cf12-2460-4f76-8ce3-6c7c2ac9598a)
+ ![Screenshot 2023-12-16 142832](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/d0f9cf12-2460-4f76-8ce3-6c7c2ac9598a)
 
-
-![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c007f8bc-5d25-4e46-a38c-b4730b9c03ea)
-
-
-![Screenshot 2023-12-16 133635](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/072b9ee6-1efe-46ca-929b-11d3e5fb4fda)
 
 To calculate the thrshold voltage in ngspice, use the plot above and extend a line tangent to the linear line (the slope), until it meets the x-axis and that would be the value of the threshold voltage.
 
 * Ngspice simulation: day3_inv_vtc_Wp084_Wn036.spice
 To use ngspice for plotting, use the following commands:
 
-     ngspice <name: day3_inv_vtc_Wp084_Wn036.spice>
-     plot <name: out> vs <name: in>
+           ngspice day3_inv_vtc_Wp084_Wn036.spice
+
+            plot  out vs  in
   
 
   Below is the screenshot of the obtained result of the VTC, where switching threshold is around 0.876v:
@@ -1021,34 +1017,21 @@ To use ngspice for plotting, use the following commands:
 ![Screenshot 2023-12-16 143914](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/90aebaea-c5a8-45b9-8976-70ec65bf5cb5)
 
 
-  ![Screenshot 2023-12-16 143914](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/1c9c4570-e869-4425-8722-53efe8561dd8)
-
-  
- ![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/26e424b2-9199-4187-bd73-c81a357e46fe)
 
 * Ngspice simulation: day3_inv_tran_Wp084_Wn036.spice
- To use ngspice for plotting, use the following commands:
+   To use ngspice for plotting, use the following commands:
 
-     ngspice <name: day3_inv_tran_Wp084_Wn036.spice>
-     plot <name: out> vs <name: time> <name: in>
+          ngspice  day3_inv_tran_Wp084_Wn036.spice
+          plot  out vs  in
 
 Below is the screenshot of the obtained result of the transient analysis, where rise delay and fall delay are around 0.322ns and 0.285ns at 0.9v (50%) respectively:
-
-![Screenshot 2023-12-16 143914](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/914232fd-5e05-478a-a7a6-81c9c25dfc45)
-
-![Screenshot 2023-12-16 144432](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/4d391710-84f1-4b9e-85ae-f42b542928e3)
-
 
 ![Screenshot 2023-12-16 144358](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/caf4b055-f7dc-43ee-b8dd-b8547fc835e0)
 
 
 
-![Screenshot 2023-12-16 144358](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/082b4fdd-26fb-4181-98c5-75596efa9d57)
+![Screenshot 2023-12-16 144432](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/4d391710-84f1-4b9e-85ae-f42b542928e3)
 
-![Screenshot 2023-12-16 144432](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/716fd9aa-4c39-4c43-92e7-daf79d384270)
-
-
-![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5fc75c46-cc00-4773-abd0-bfe3841e00ff)
 
 * Ngspice simulation: day4_inv_noisemargin_wp1_wn036.spice
   To use ngspice for plotting, use the following commands:
@@ -1065,12 +1048,10 @@ Below is the screenshot of the obtained result of the transient analysis, where 
 ![Screenshot 2023-12-16 144929](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/5991f7fe-d28c-49a6-a910-18d13004bbab)
 
 
- ![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/f4382afa-d3bb-4a94-b2d3-377d843966ad)
-
 * Ngspice simulation: day5_inv_supplyvariation_Wp1_Wn036.spice
 To use ngspice for plotting, use the following commands:
 
-     ngspice <name: day5_inv_supplyvariation_Wp1_Wn036.spice>
+       ngspice <name: day5_inv_supplyvariation_Wp1_Wn036.spice>
 
   Below is the screenshot of the obtained result of the VTC curves for different supply voltages, gain in curve corresponding to 1.8v is (1.706-0.076)/(1.008-0.772)=6.907. Gain in curve corresponding to 0.8v is (0.770-0.021)/(0.511-0.428)=9.024 (increases as supply voltage decreases, but then decreases again because supply would not be enough for the device to operate):
 
@@ -1078,15 +1059,14 @@ To use ngspice for plotting, use the following commands:
 
 ![Screenshot 2023-12-16 145530](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/c14823b4-1652-4087-a56c-c7c61d7d114a)
 
-![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/061aaf51-8a20-40db-9bac-d94c47ddaffc)
 
 Ngspice simulation: day5_inv_devicevariation_wp7_wn042.spice
-To use ngspice for plotting, use the following commands:
+To use ngspice for plotting, use the following commands: 
 
       ngspice <name: day5_inv_devicevariation_wp7_wn042.spice>
       plot <name: out> vs <name: in>
 
-      ![Screenshot 2023-12-16 150152](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/da8c287b-0c9d-4be2-9424-42a3ced2897c)
+ ![Screenshot 2023-12-16 150152](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/da8c287b-0c9d-4be2-9424-42a3ced2897c)
 
 
 ![image](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/4764f0e5-3aed-4115-ab9b-912ced4870e5)
