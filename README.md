@@ -947,6 +947,14 @@ So , we get all required input for Static timing analysis .Now run STA using ope
 
 ![2 (3)](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/16cb1d06-3917-4430-b058-71c86ac06f80)
 
+## facing syntax error while reading verilog file in OpenSTA 
+
+![WhatsApp Image 2023-12-22 at 22 34 31](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/9a56bd23-e60a-4f8b-8095-441467d8655b)
+
+![WhatsApp Image 2023-12-22 at 22 34 30](https://github.com/Rohitkadam31/VSD-HDP/assets/148602919/a8a4a7f4-86b7-41eb-9d44-36445ae84408)
+
+
+
 # An introduction to SPICE and how it is used to analyse MOSFETS
 
 # CMOS Voltage Transfer Characteristics
